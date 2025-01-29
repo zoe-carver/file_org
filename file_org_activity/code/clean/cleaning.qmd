@@ -34,6 +34,28 @@ Practicing your keyboard shortcuts. Try out the following as you work on this ex
 # Implementation
 
 ```{r}
+library(tidyverse)
+weather <- read_csv("../../data/raw/weather.csv")
+```
+```{r}
+weather <- weather %>% 
+  mutate(PrecipYr = na_if(PrecipYr, 99999))
+```
 
+```{r}
+# Create a variable called `dateInYear` that indicates the day of the year (1-365) for each case. (Jan 1 should be 1, and Dec 31 should be 365).
+
+weather <- weather %>% 
+  mutate(date = mdy(date)) %>% 
+  mutate(dateInYear = yday(date))
+```
+
+```{r}
+weather <- weather %>% 
+  mutate(month_name = month(date, label = TRUE, abbr = TRUE))
+```
+
+```{r}
+write_csv(weather, "../../data/clean/weather_clean.csv")
 ```
 
