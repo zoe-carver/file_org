@@ -1,0 +1,39 @@
+---
+title: "Cleaning SFO weather data"
+---
+
+# Tasks
+
+1. Read in the weather data in this file with the correct relative file path.
+  - Find the weather data within the file structure provided in the `.zip` file for this activity.
+2. There is a variable that has values that don't make sense in the data context. Figure out which variable this is and clean it up by making those values missing using `na_if()`.
+3. Create a variable called `dateInYear` that indicates the day of the year (1-365) for each case. (Jan 1 should be 1, and Dec 31 should be 365).
+4. Create a variable called `month_name` that shows the 3-letter abbreviation for each case.
+5. Save your wrangled data to the `data/clean/` folder using `write_csv()`. Name this file `weather_clean.csv`. Look up the documentation for this function by entering `?write_csv` in the Console. You'll need to write an appropriate relative path.
+
+
+Notes that may help for the data wrangling:
+
+- `month.abb` is a built-in object in R with 3-letter month abbreviations
+- You can create your own data frame with the `tibble()` function. Look up the documentation for this function by entering `?tibble::tibble` in the Console.
+- You can create regular sequences in R with `:`.
+    - Example: `3:5` generates the sequence `c(3, 4, 5)`.
+- You can also create regular sequences in R with `seq()`. Look up the documentation for this function by entering `?seq` in the Console.
+    - Example: `seq(from = 3, to = 5, by = 1)` generates the sequence `c(3, 4, 5)`.
+
+
+
+Practicing your keyboard shortcuts. Try out the following as you work on this exercise:
+
+- Tab completion (Try this out when writing your file paths! Typing out a partial path will pull up a mini file-explorer)
+- Insert a code chunk
+- Run a code chunk
+- Navigating around words and lines (selecting and deleting them)
+- Run selected lines (not a whole code chunk)
+
+# Implementation
+
+```{r}
+
+```
+
